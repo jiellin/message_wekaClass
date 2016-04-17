@@ -8,7 +8,10 @@ import weka.classifiers.Evaluation;
 import weka.classifiers.functions.LinearRegression;
 import weka.classifiers.functions.Logistic;
 import weka.core.Instances;
+<<<<<<< HEAD
 import weka.core.SerializationHelper;
+=======
+>>>>>>> 46018fd42ceef300e5d4710080c0dbe2c53e0963
 import weka.core.converters.ArffLoader;
 import weka.core.pmml.FieldMetaInfo.Value;
 import writeAndRead.WriteLine;
@@ -34,8 +37,11 @@ public class wekaMain {
 					"weka.classifiers.trees.RandomForest").newInstance();
 			classifier1.buildClassifier(instancesTrain);
 			System.out.println("RandomForest Model is ok!");
+<<<<<<< HEAD
 			// sava the paramaters of this model
 			// SerializationHelper.write("RandomForest.model", classifier1);
+=======
+>>>>>>> 46018fd42ceef300e5d4710080c0dbe2c53e0963
 		} else {
 			System.out.println("start classifier.");
 			classifier1 = (Classifier) Class.forName(
@@ -55,16 +61,23 @@ public class wekaMain {
 		System.out.println("Result is writing!");
 		WriteLine writer = new WriteLine("classShixionglibnear256.utf8");
 		for (int i = 0; i < sum; i++) {
+<<<<<<< HEAD
 			// read model from localFile
 			// classifier1 = (Classifier) weka.core.SerializationHelper
 			//	.read("RandomForest.model");
+=======
+>>>>>>> 46018fd42ceef300e5d4710080c0dbe2c53e0963
 			int type = (int) classifier1.classifyInstance(instancesTest
 					.instance(i));
 			writer.appendLine(type);
 		}
 		System.out.println("Result writing is over!");
 		writer.closeWrite();
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 46018fd42ceef300e5d4710080c0dbe2c53e0963
 		// 交叉验证
 		System.out.println("开始交叉验证2");
 		Evaluation eva1 = new Evaluation(instancesTrain);
