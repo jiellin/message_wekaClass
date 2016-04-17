@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: lib/weka-src.jar lib/weka.jar lib/libsvm.jar lib/liblinear-1.5.jar
+Main-Class: wekaMain
+
